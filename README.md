@@ -40,9 +40,9 @@ npm install vant --save --registry=https://registry.npm.taobao.org
 
 # 适配手机
 1、移动端适配方法  
-* 固定高度，宽度百分比（过时了）  
-* Media Query（媒体查询，较新）  
-* flex布局+rem（目前的主流）  
+ * 固定高度，宽度百分比（过时了）  
+ * Media Query（媒体查询，较新）  
+ * flex布局+rem（目前的主流）  
 2、rem（font size of the root element）是相对长度单位。相对于根元素（即html元素）font-size计算值的倍数。
 3、在iphone 5中1rem=16px，宽度为320px，也就是html中font-size=16px;  
 4、获取屏幕大小，对根元素设置font-size的大小，以达成rem的适配：  
@@ -50,4 +50,19 @@ npm install vant --save --registry=https://registry.npm.taobao.org
 let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
 let htmlDom = document.getElementByTagName('html')[0];
 htmlDom.style.fontSize = htmlWidth / 20 + 'px';
+```
+
+# 首页布局
+1、移动端禁止用户缩放，在meta标签中加入：user-scalable=no 
+```javascript
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+```
+2、vue模块快速搭建插件：Vue VSCode Snippets,标签自动闭合插件：auto close tag 
+3、vant是24格布局法，需要引入Row、Col组件  
+```javascript
+<van-row>
+  <van-col span="8">span:8</van-col>
+  <van-col span="8">span:8</van-col>
+  <van-col span="8">span:8</van-col>
+</van-row>
 ```

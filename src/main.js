@@ -9,9 +9,9 @@ import router from './router'
 // Vue.use(Vant)
 
 // 按需引入vant中的组件
-import {Button} from 'vant'
+import {Button, Row, Col} from 'vant'
 
-Vue.use(Button)
+Vue.use(Button).use(Row).use(Col)
 
 Vue.config.productionTip = false
 
