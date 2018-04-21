@@ -40,9 +40,9 @@ npm install vant --save --registry=https://registry.npm.taobao.org
 
 # 适配手机
 1、移动端适配方法  
- * 固定高度，宽度百分比（过时了）  
- * Media Query（媒体查询，较新）  
- * flex布局+rem（目前的主流）  
+（1）固定高度，宽度百分比（过时了）  
+（2）Media Query（媒体查询，较新）  
+（3）flex布局+rem（目前的主流）  
 2、rem（font size of the root element）是相对长度单位。相对于根元素（即html元素）font-size计算值的倍数。
 3、在iphone 5中1rem=16px，宽度为320px，也就是html中font-size=16px;  
 4、获取屏幕大小，对根元素设置font-size的大小，以达成rem的适配：  
